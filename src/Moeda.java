@@ -1,4 +1,3 @@
-import java.util.Objects;
 
 abstract public class Moeda {
     double valor;

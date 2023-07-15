@@ -2,7 +2,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class Cofrinho {
-    private ArrayList<Moeda> listaMoeda = new ArrayList<Moeda>();
+    private final ArrayList<Moeda> listaMoeda = new ArrayList<Moeda>();
 
     public void adicionar(Moeda moeda) {
         boolean alreadyInList = listaMoeda.contains(moeda);
