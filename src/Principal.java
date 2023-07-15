@@ -30,15 +30,15 @@ public class Principal {
                             switch (typeOfCoin) {
                                 case 1 -> {
                                     real.set(amountOfCoins);
-                                    cofrinho.adicionar(real);
+                                    cofrinho.adicionar(real, amountOfCoins);
                                 }
                                 case 2 -> {
                                     dollar.set(amountOfCoins);
-                                    cofrinho.adicionar(dollar);
+                                    cofrinho.adicionar(dollar, amountOfCoins);
                                 }
                                 case 3 -> {
                                     euro.set(amountOfCoins);
-                                    cofrinho.adicionar(euro);
+                                    cofrinho.adicionar(euro, amountOfCoins);
                                 }
                                 default -> System.out.println("Opção inválida.");
                             }

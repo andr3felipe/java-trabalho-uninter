@@ -4,26 +4,23 @@ import java.util.ArrayList;
 public class Cofrinho {
     private final ArrayList<Moeda> listaMoeda = new ArrayList<>();
 
-    public void adicionar(Moeda moeda) {
+    public void adicionar(Moeda moeda, double amountOfCoins) {
         boolean alreadyInList = listaMoeda.contains(moeda);
 
-        if (!alreadyInList) {
-            listaMoeda.add((moeda));
-        } else {
-            int indexOfCoin = listaMoeda.indexOf(moeda);
-           listaMoeda.set(indexOfCoin, moeda);
-        }
-
         if (moeda instanceof Real) {
-            System.out.println("Você adicionou " + moeda.get() + " reais ao cofrinho.");
+            System.out.println("Você adicionou " + amountOfCoins + " reais ao cofrinho.");
         }
 
         if (moeda instanceof Dollar) {
-            System.out.println("Você adicionou " + moeda.get() + " dolares ao cofrinho.");
+            System.out.println("Você adicionou " + amountOfCoins + " dolares ao cofrinho.");
         }
 
         if (moeda instanceof Euro) {
-            System.out.println("Você adicionou " + moeda.get() + " euros ao cofrinho.");
+            System.out.println("Você adicionou " + amountOfCoins + " euros ao cofrinho.");
+        }
+
+        if (!alreadyInList) {
+            listaMoeda.add((moeda));
         }
 
     }
